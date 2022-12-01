@@ -1,0 +1,41 @@
+// GENERAL PROJECT STYLES
+
+
+.title {
+    border-bottom: 1px solid $darkbgcolor;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    @media screen and (max-width: 575px) {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+}
+.title--dark {
+    border-bottom: 1px solid $textcolor;
+    color: $textcolor
+}
+
+.dark-block {
+    background: $darkbgcolor;
+    color: $textcolor
+}
+
+.block {
+    padding: 60px 0;
+    @media screen and (max-width: 991px) {
+        padding: 40px 0;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 30px 0;
+    }
+    @media screen and (max-width: 575px) {
+        padding: 25px 0;
+    }
+}
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        scroll-behavior: auto
+    }
+}
+
+    

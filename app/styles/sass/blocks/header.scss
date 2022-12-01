@@ -1,0 +1,102 @@
+.header {
+
+    padding: 15px 0;
+    backdrop-filter: blur(15px);
+    color: $textcolor;
+    @media screen and (max-width: 991px) {
+        background: $darkbgcolor;
+        &__menu, &__contacts {
+            display: none;
+        }
+
+    }
+    @media screen and (min-width: 992px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__phone {
+        color: $textcolor;
+        text-decoration: none;
+        &:hover {
+            color: $textcolorShine;
+        }
+    }
+
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: 300;
+    padding-left: 0;
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+    }
+    &__link {
+        color: $textcolor;
+        position: relative;
+        text-decoration: none;
+        transition: all 400ms;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            background: $textcolorShine;
+            height: 1px;
+            transition: all 400ms;
+        }
+        &:hover {
+            color: $textcolorShine;
+            text-shadow: 0 0 5px $textcolorShine;
+        }
+        &:hover:before {
+            width: 100%;
+        }
+        &.active:before {
+            width: 100%;
+        }
+    }
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__item {
+        color: $textcolor;
+        text-decoration: none;
+        &:hover {
+            color: $textcolorShine;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+    }
+}
+
+
+.logo {
+    max-width: 100px;
+}

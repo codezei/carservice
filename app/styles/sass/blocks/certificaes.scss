@@ -1,0 +1,33 @@
+.certificates {
+    &__dots {
+        position: static;
+        margin-top: 15px;
+        li {
+            button {
+                background:  $textcolor;
+                border-radius: 50%;
+
+            }
+        }
+        .slick-active button {
+            background: $textcolorShine;
+            box-shadow: 0 0 5px $textcolorShine;
+        }
+    }
+    &__arrow {
+        position: absolute !important;
+        top: 50%;
+        background: none;
+        border: none;
+        outline: none;
+        &--left {
+            left: 0;
+        }
+        &--right {
+            right: 0;
+        }
+    }
+    &__list {
+        padding: 0 25px;
+    }
+}

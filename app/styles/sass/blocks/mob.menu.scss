@@ -1,0 +1,78 @@
+.mob-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: $textcolor;
+    display: none;
+    &--open {
+        display: block;
+    }
+    @media screen and (min-width: 992px) {
+        display: none !important;
+    }
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    &__inner {
+        position: fixed;
+        right: 0;
+        top: 0;
+        max-width: 300px;
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+        background: $darkbgcolor;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transform: translateX(100%);
+        transition: all 400ms;
+        &--open {
+            transform: translateX(0);
+        }
+    }
+    &__close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: inherit;
+        display: block;
+        width: 30px;
+        margin-left: auto;
+        svg {
+            pointer-events: none;
+        }
+
+    }
+    &-open {
+        background: none;
+        border: none;
+        color: $textcolor;
+        cursor: pointer;
+        &:hover {
+            color: $textcolorShine;
+        }
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+        svg {
+            pointer-events: none;
+        }
+    }
+    &__phone {
+        color: $textcolor;
+        text-decoration: none;
+        &:hover {
+            color: $textcolorShine;
+        }
+    }
+    &__bottom {
+        text-align: center;
+    }
+}

@@ -1,0 +1,24 @@
+.footer {
+    background: $darkbgcolor;
+    color: $textcolor;
+    padding: 25px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 991px) {
+            align-items: flex-start;
+        }
+    }
+    &__contacts {
+        text-align: center;
+    }
+
+    &__phone {
+        color: $textcolor;
+        text-decoration: none;
+        &:hover {
+            color: $textcolorShine;
+        }
+    }
+}

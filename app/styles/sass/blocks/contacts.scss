@@ -1,0 +1,25 @@
+.contacts {
+    &-map {
+        iframe {
+            width: 100%;
+        }
+
+    }
+    &-info {
+        &__item {
+            &-data {
+                display: block;
+                color: inherit;
+                margin-bottom: 0;
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__contacts-info {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 25px;
+        }
+    }
+}
